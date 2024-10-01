@@ -3,30 +3,28 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
+
 __version__ = "0.0.0"
-REPO_NAME = "Text-Summarizer"
-SRC_REPO = "Text_Summarizer"  # This should be a string, not a tuple
-AUTHOR_NAME = "Ayush Jha"
-AUTHOR_EMAIL = "ayushjha4277@gmail.com"
+
+REPO_NAME = "Text-Summarizer-Project"
+AUTHOR_USER_NAME = "entbappy"
+SRC_REPO = "textSummarizer"
+AUTHOR_EMAIL = "entbappy73@gmail.com"
+
+
 
 setuptools.setup(
     name=SRC_REPO,
     version=__version__,
-    author=AUTHOR_NAME,  # The author's name should be separate from the email
+    author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="Text Summarizer",
+    description="A small python package for NLP app",
     long_description=long_description,
-    long_description_content_type="text/markdown",
-    url=f"https://github.com/b423016/{REPO_NAME}",
+    long_description_content="text/markdown",
+    url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     project_urls={
-        "Bug Tracker": f"https://github.com/b423016/{REPO_NAME}/issues",
+        "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
-    package_dir={"": "src"},  # Mapping root ('') to 'src' directory
-    packages=setuptools.find_packages(where="src"),  # Look for packages inside the 'src' directory
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires='>=3.6',
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src")
 )
